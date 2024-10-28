@@ -1,0 +1,109 @@
+:root {
+	--background-color: white;
+	--text-color: black;
+    --primary-color: #ff5e00;
+    --secondary-color: #ffcaab;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+object {
+    color: var(--primary-color);
+}
+
+html {
+    width: 90%;
+    margin: auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;    
+    line-height: 1.5;
+}
+
+.header-container {
+    padding-top: 15%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+h1 {
+    text-align: center;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    height: 60px;
+    padding: 13px 0px 17px 25px;
+    border-radius: 30px;
+    font-size: 30px;
+    line-height: normal;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: justify;
+}
+
+.project {
+    flex: 0 0 100%;
+    border: var(--text-color) 1px solid;
+    border-radius: 10px;
+    padding: 15px 15px 0 15px;
+}
+
+.btn-icon {
+    fill: var(--primary-color);
+}
+
+
+@media screen and (min-width: 960px) and (min-aspect-ratio: 1/1) {
+    html {
+        width: 60%;
+    }
+
+    .project {
+        flex: 1 0 26%;
+    }
+
+    .header-container {
+        padding-top: 10%;
+    }
+}
+
+.contact-button {
+    padding: 10px 10px 8px 10px;
+    border: var(--text-color) 1px solid;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.contact-icon {
+    color: var(--text-color);
+}
+
+.picture-container {
+    width: 30%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 50%;
+}
+
+
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-container {
+    margin: auto;
+}
