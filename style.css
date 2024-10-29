@@ -1,11 +1,13 @@
 :root {
 	--background-color: white;
-	--text-color: black;
-    --primary-color: #ff5e00;
-    --secondary-color: #ffcaab;
+	--text-color: #101010;
+    --primary-color: #e3783d;
+    --secondary-color: #fcf1ea;
 
 }
 
+@font-face { font-family: Montserrat; src: url('/fonts/montserrat.ttf'); } 
+@font-face { font-family: Montserrat; font-style: italic; src: url('/fonts/monserrat_italic.ttf');}
 
 * {
     box-sizing: border-box;
