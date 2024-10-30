@@ -30,18 +30,17 @@ html {
 }
 
 .header-container {
-    padding-top: 15%;
+    padding-top: 100px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    line-height: 2;
 }
 
 .picture-container {
     width: 30%;
     aspect-ratio: 1/1;
     overflow: hidden;
-    margin: auto;
+    margin: 20px auto;
     border-radius: 50%;
 }
 
@@ -208,11 +207,11 @@ xpjob {
         width: 70%;
     }
 
-    .project {
-        flex: 1 0 26%;
+    .picture-container {
+        width: 20%;
     }
 
-    .header-container {
-        padding-top: 10%;
+    .project {
+        flex: 1 0 26%;
     }
 }
