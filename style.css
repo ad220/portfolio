@@ -11,6 +11,7 @@
 }
 
 @font-face { font-family: Montserrat; src: local("Montserrat"), url('/fonts/montserrat.woff2'); font-style: normal;} 
+@font-face { font-family: Montserrat; src: local("Montserrat Bold"), url('/fonts/montserrat.woff2'); font-style: normal; font-weight: bold;} 
 @font-face { font-family: Montserrat; src: local("Montserrat Italic"), url('/fonts/montserrat_italic.woff2'); font-style: italic;}
 
 * {
