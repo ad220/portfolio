@@ -10,8 +10,8 @@
     --secondary-color: #65605e; */
 }
 
-@font-face { font-family: Montserrat; src: url('/fonts/montserrat.ttf'); } 
-@font-face { font-family: Montserrat; font-style: italic; src: url('/fonts/monserrat_italic.ttf');}
+@font-face { font-family: Montserrat; src: local("Montserrat"), url('/fonts/montserrat.woff2'); font-style: normal;} 
+@font-face { font-family: Montserrat; src: local("Montserrat Italic"), url('/fonts/montserrat_italic.woff2'); font-style: italic;}
 
 * {
     box-sizing: border-box;
