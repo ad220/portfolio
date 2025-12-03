@@ -215,6 +215,7 @@ xpjob {
         width: 70%;
         max-width: 1180px;
         font-size: medium;
+        margin-bottom: 60px;
     }
 
     h1 {
