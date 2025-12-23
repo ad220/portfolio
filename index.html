@@ -8,11 +8,46 @@
     <title>Arthur DAVID</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/portfolio.png" type="image/x-icon">
+    <script>
+        // Dark mode toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const htmlElement = document.documentElement;
+
+            // Check for saved user preference or use system preference
+            const savedPreference = localStorage.getItem('darkMode');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            // Apply saved preference or system preference
+            if (savedPreference === 'enabled' || (savedPreference === null && prefersDark)) {
+                htmlElement.classList.add('dark-mode');
+            }
+
+            // Toggle dark mode
+            darkModeToggle.addEventListener('click', function() {
+                htmlElement.classList.toggle('dark-mode');
+
+                // Save user preference
+                if (htmlElement.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <div class="header-container">
+            <div id="dark-mode-toggle">
+                <button class="contact-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid">
+                        <path d="M0 9a1 1 0 011-1h2.108a5.931 5.931 0 011.006-2.471L2.636 4.051A.999.999 0 114.05 2.637l1.478 1.478a5.942 5.942 0 012.471-1.006V1a1 1 0 012 0v2.108a5.944 5.944 0 012.477 1.001l1.473-1.473a.999.999 0 111.414 1.414l-11.4 11.4a.997.997 0 01-1.414 0 .999.999 0 010-1.414l1.56-1.56a5.933 5.933 0 01-1.001-2.477H1a1 1 0 01-1-1zM23.707.293a.999.999 0 00-1.414 0l-22 22a.999.999 0 101.414 1.414l22-22a.999.999 0 000-1.414zm-.283 10.954a1.002 1.002 0 00.165-1.714 7.972 7.972 0 00-2.897-1.315 1 1 0 00-.934.267l-8.392 8.391a1 1 0 00-.267.933A7.959 7.959 0 0018.891 24c1.695 0 3.32-.53 4.697-1.533a1 1 0 00-.165-1.715c-1.842-.861-3.033-2.727-3.033-4.752s1.19-3.891 3.033-4.753z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
             <div class="picture-container">
                 <img src="img/profile.jpg" alt="profile picture" class="profile-img" style="width: 100%;">
             </div>
