@@ -15,8 +15,8 @@
 	--text-color: #dbdbdb;
     --title-color: white;
     --subtitle-color: var(--title-color);
-    --primary-color: hsl(21, 81%, 42%);
-    --secondary-color: hsl(21, 64%, 39%);
+    --primary-color: hsl(21, 86%, 42%);
+    --secondary-color: hsl(21, 72%, 39%);
     --accent-color: #282828;
     --button-color: var(--accent-color);
     --github-color: var(--background-color);
