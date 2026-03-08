@@ -24,9 +24,16 @@
     --img-filter: brightness(1.1) drop-shadow(0 0 20px var(--background-color));;
 }
 
-@font-face { font-family: Montserrat; src: local("Montserrat"), url('/fonts/montserrat.woff2'); font-style: normal;} 
-@font-face { font-family: Montserrat; src: local("Montserrat Bold"), url('/fonts/montserrat.woff2'); font-style: normal; font-weight: bold;} 
-@font-face { font-family: Montserrat; src: local("Montserrat Italic"), url('/fonts/montserrat_italic.woff2'); font-style: italic;}
+@font-face { font-family: Montserrat; src: local("Montserrat"), url('fonts/montserrat.woff2'); font-style: normal;} 
+@font-face { font-family: Montserrat; src: local("Montserrat Bold"), url('fonts/montserrat.woff2'); font-style: normal; font-weight: bold;} 
+@font-face { font-family: Montserrat; src: local("Montserrat Italic"), url('fonts/montserrat_italic.woff2'); font-style: italic;}
+
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  unicode-range: U+1F1E6-1F1FF;
+  src: local("Noto Color Emoji"), url('fonts/NotoColorEmoji-flagsonly.woff2');
+}
+
 
 * {
     box-sizing: border-box;
