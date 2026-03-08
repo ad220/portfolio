@@ -8,6 +8,7 @@
     --accent-color: #fcf1ea;
     --button-color: var(--text-color);
     --github-color: var(--text-color);
+    --img-filter: none;
 }
 
 .dark-mode {
@@ -20,6 +21,7 @@
     --accent-color: #282828;
     --button-color: var(--accent-color);
     --github-color: var(--background-color);
+    --img-filter: brightness(1.1) drop-shadow(0 0 20px var(--background-color));;
 }
 
 @font-face { font-family: Montserrat; src: local("Montserrat"), url('/fonts/montserrat.woff2'); font-style: normal;} 
@@ -39,7 +41,7 @@ html {
     margin: auto;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Montserrat';
+    font-family: 'NotoColorEmojiLimited', 'Montserrat';
     font-size: 12px;
 }
 
@@ -91,6 +93,20 @@ a {
     color: var(--text-color);
 }
 
+.about {
+    margin: 20px auto;
+
+    & p {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    & a {
+        font-weight: 600;
+        text-decoration-line: none;
+    }
+}
+
 .button-container {
     text-align: center;
     & .contact-button {
@@ -134,22 +150,39 @@ a {
 
 ul {
     margin-bottom: 10px;
-    padding-inline-start: 20px;
+    padding: 0;
+    list-style-type: none;
 }
 
-li::marker {
-    font-size: 12px;
-    color: var(--subtitle-color);
-}
+li {
+    margin: 15px 0;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    
+    & .logo-container {
+        width: 300px;
+        text-align: center;
+        
+        & img {
+            height: 42px;
+            filter: var(--img-filter);
+        }
+    }
 
-.resume-content {
-    margin: 20px 0;
+    & .content {
+        width: 200px;
+        flex-grow: 1;
+        flex-basis: auto;
+        padding: 0 10px;
+    }
 }
 
 cvtitle {
     display: block;
     font-weight: bold;
-    margin-top: 8px;
     color: var(--subtitle-color);
 }
 
@@ -166,13 +199,12 @@ cvtext {
 }
 
 xpcie {
-    display: inline-block;
-    font-weight: bold;
+    font-weight: normal;
+    float: right;
 }
 
 xpjob {
     display: inline-block;
-    font-weight: normal;
 }
 
 .download-icon {
@@ -299,19 +331,10 @@ xpjob {
 
     ul {
         margin-bottom: 20px;
-        padding-inline-start: 40px;
-    }
-    
-    li::marker {
-        font-size: 20px;
     }
 
     .resume-content {
         margin: 30px 0;
-    }
-
-    cvtitle {
-        margin-top: 15px;
     }
 
     cvdate {
