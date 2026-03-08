@@ -166,24 +166,19 @@ li {
     background-color: var(--accent-color);
     border-radius: 15px;
     padding: 20px;
-    display: flex;
-    align-items: center;
     
     & .logo-container {
-        width: 300px;
         text-align: center;
         
         & img {
-            height: 42px;
+            max-height: 28px;
+            max-width: 120px;
             filter: var(--img-filter);
         }
     }
 
     & .content {
-        width: 200px;
-        flex-grow: 1;
-        flex-basis: auto;
-        padding: 0 10px;
+        padding: 15px 0 0 0;
     }
 }
 
@@ -207,7 +202,8 @@ cvtext {
 
 xpcie {
     font-weight: normal;
-    float: right;
+    display: block;
+    margin-bottom: 3px;
 }
 
 xpjob {
@@ -340,12 +336,44 @@ xpjob {
         margin-bottom: 20px;
     }
 
+        
+    li {
+        margin: 15px 0;
+        background-color: var(--accent-color);
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        
+        & .logo-container {
+            width: 300px;
+            text-align: center;
+            
+            & img {
+                max-height: 42px;
+                max-width: 180px;
+            }
+        }
+
+        & .content {
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 0 10px;
+        }
+    }
+
     .resume-content {
         margin: 30px 0;
     }
 
     cvdate {
         margin-bottom: 5px;
+    }
+    
+    xpcie {
+        float: right;
+        margin: 0;
+        font-size: 14px;
     }
 
     .download-icon {
